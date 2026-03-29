@@ -13,6 +13,8 @@ The analysis utilized the **Market-1501 dataset**, a benchmark for person re-ide
 * **Timeframe:** The data reflects real-world captures across a university campus, providing high intra-class variability.
 * **Data Limitations:** The images are relatively low resolution ($128 \times 64$ or similar aspect ratios), and the dataset is limited by "pose-bias," where individuals may only be seen from specific angles (e.g., only from the back), making frontal identification more difficult.
 * **Preprocessing:** Images were normalized and transformed using the `PyTorch` and `Albumentations` libraries to improve model generalization.
+<img width="796" height="450" alt="Screen Shot 2026-03-30 at 00 57 11" src="https://github.com/user-attachments/assets/eef471b1-dff7-4c14-9cf7-984330a1c412" />
+<img width="795" height="452" alt="Screen Shot 2026-03-30 at 00 58 24" src="https://github.com/user-attachments/assets/81f09103-a147-4dfd-9ea5-aba3700bf2f9" />
 
 ### **Modeling and Evaluation**
 The project implemented a sophisticated deep learning pipeline:
@@ -21,6 +23,7 @@ The project implemented a sophisticated deep learning pipeline:
 * **Evaluation Metrics:**
     * **Triplet Margin Loss:** This was the primary objective function, ensuring that the distance between anchor and positive pairs is smaller than the distance between anchor and negative pairs by at least a specified margin.
     * **Validation Loss:** The model performance was monitored via validation loss to prevent overfitting, with the "Best Model" weights saved upon reaching the lowest validation error.
+<img width="1560" height="1560" alt="final results" src="https://github.com/user-attachments/assets/c603b3e4-6ef4-4a53-9827-1f96185c12fe" />
 
 ### **Conclusion**
 The project demonstrates that Siamese Networks with transfer learning (EfficientNet) are highly effective at learning identity-based features rather than just visual textures. 
