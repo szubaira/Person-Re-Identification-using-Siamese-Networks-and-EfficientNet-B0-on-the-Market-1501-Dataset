@@ -1,7 +1,4 @@
-```
 ## **Person Re-Identification using Siamese Networks and EfficientNet-B0 on the Market-1501 Dataset**
-
----
 
 ### **Project Overview**
 This project addresses the challenge of **Person Re-Identification (Re-ID)**, which involves identifying the same individual across multiple non-overlapping camera views. To solve this, I developed a **Siamese Neural Network** using a pre-trained **EfficientNet-B0** backbone to extract highly discriminative 512-dimensional feature embeddings. Utilizing the **Market-1501 dataset**, the model was trained using a **Triplet Margin Loss** function to minimize the distance between images of the same person (positives) while maximizing the distance from different individuals (negatives). The implementation successfully optimized embedding clusters, providing a scalable solution for automated tracking and security applications.
@@ -16,8 +13,6 @@ The analysis utilized the **Market-1501 dataset**, a benchmark for person re-ide
 * **Timeframe:** The data reflects real-world captures across a university campus, providing high intra-class variability.
 * **Data Limitations:** The images are relatively low resolution ($128 \times 64$ or similar aspect ratios), and the dataset is limited by "pose-bias," where individuals may only be seen from specific angles (e.g., only from the back), making frontal identification more difficult.
 * **Preprocessing:** Images were normalized and transformed using the `PyTorch` and `Albumentations` libraries to improve model generalization.
-<img width="795" height="452" alt="Screen Shot 2026-03-30 at 00 58 24" src="https://github.com/user-attachments/assets/68195c0b-1149-4666-a966-2e30de41cc7f" />
-<img width="796" height="450" alt="Screen Shot 2026-03-30 at 00 57 11" src="https://github.com/user-attachments/assets/89fa7843-68c6-4864-96d8-ec1595ba9312" />
 
 ### **Modeling and Evaluation**
 The project implemented a sophisticated deep learning pipeline:
@@ -26,7 +21,6 @@ The project implemented a sophisticated deep learning pipeline:
 * **Evaluation Metrics:**
     * **Triplet Margin Loss:** This was the primary objective function, ensuring that the distance between anchor and positive pairs is smaller than the distance between anchor and negative pairs by at least a specified margin.
     * **Validation Loss:** The model performance was monitored via validation loss to prevent overfitting, with the "Best Model" weights saved upon reaching the lowest validation error.
-<img width="1560" height="1560" alt="final results" src="https://github.com/user-attachments/assets/13e3f8d2-3ef0-4310-aa3e-6729cc14bd6c" />
 
 ### **Conclusion**
 The project demonstrates that Siamese Networks with transfer learning (EfficientNet) are highly effective at learning identity-based features rather than just visual textures. 
